@@ -1,0 +1,67 @@
+body {
+   background: linear-gradient(45deg, #4511a6, #57063b);
+   min-height: 100vh;
+    margin: 0 auto; /* Centra la lista */
+  padding: 0; /* Rimuovi il padding predefinito */
+}
+.list-group-item div {
+  /* Modifica il valore a tuo piacimento */
+  overflow-y: auto;
+  white-space: normal;
+}
+.list-group-item {
+  display: flex;
+  flex-direction: column;
+    border-bottom: 2px solid #000000; /* Modifica lo spessore e il colore a tuo piacimento */
+  position: relative; /* Posizione relativa per i pulsanti assoluti */
+  height: auto; /* Altezza dinamica */
+}
+
+
+/* Per allineare i pulsanti Modifica e Salva */
+.list-group-item .btn {
+  margin-top: 22px;
+}
+
+.form-control.auto-expanding {
+  resize: none;
+}
+
+/* Rimuovi il bordo del campo quando è in modalità di modifica */
+.form-control.auto-expanding:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* CSS per i contenuti delle note */
+.note-content {
+  position: relative;
+}
+
+/* CSS per il testo delle note */
+.note-text {
+  white-space: normal; /* Rendetelo avvolgente */
+   margin-bottom: 30px; /* Aggiungi un margine inferiore al testo */
+}
+
+/* CSS per i pulsanti delle note */
+.note-buttons {
+  position: absolute; /* Posizione assoluta per i pulsanti */
+  bottom: 1px; /* Distanza dal fondo della nota */
+  right: 0; /* Allinea i pulsanti a destra */
+}
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.6);
+  }
+}
+
+h1.text-white::after {
+  content: "✍️"; /* Emoji nel contenuto dell'h1 */
+  display: inline-block;
+  animation: sparkle 4s ease infinite; /* Applica l'animazione "sparkle" all'emoji */
+  padding-left: 12px;
+}
